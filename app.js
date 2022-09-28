@@ -35,5 +35,23 @@ btnContainer.addEventListener(`click`, (e) => {
     num1 = Number(input.innerText);
     operator = `division`;
     input.innerText = ``;
+  } else if (e.target.id == `multi` && !num1Done && input.innerText) {
+    input2.innerText += input.innerText + ` *`;
+    input.innerText = ``;
+    num1 = Number(input.innerText);
+    operator = `multi`;
+    input.innerText = ``;
+  } else if (e.target.id == `sub` && !num1Done && input.innerText) {
+    input2.innerText += input.innerText + ` -`;
+    input.innerText = ``;
+    num1 = Number(input.innerText);
+    operator = `sub`;
+    input.innerText = ``;
+  } else if (e.target.id == `add` && !num1Done && input.innerText) {
+    input2.innerText += input.innerText + ` +`;
+    input.innerText = ``;
+    num1 = Number(input.innerText);
+    operator = `add`;
+    input.innerText = ``;
   }
 });
